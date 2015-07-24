@@ -10,6 +10,10 @@ import lib.create
 
 but this syntax usually raises errors when I run the code with Pytest.
 
+**Solution found**: see [below](#solution).
+
+---
+
 I'd appreciate any advice. I've placed a minimal example in the files in this repository. After cloning, enter the set up under Python 2.7 with:
 
 ```bash
@@ -100,3 +104,15 @@ Other comments:
 ---
 
 Thanks for any suggestions as to how to deal with this.
+
+### Solution
+
+The solution is include a `setup.py` file at the top-level directory of the project, and then to use `pip` to install it in "editable mode"
+
+```bash
+pip install -e .
+```
+
+That will generate a directory whose name ends in `.egg-info` and which contains a number of configuration files. After that, running with Pytest takes place without difficulties.
+
+[end]
