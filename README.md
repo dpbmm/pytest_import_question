@@ -86,6 +86,17 @@ Other comments:
 
     but the result is the same.
 
+ 1. The example works with `nose`, however:
+
+    ```bash
+    $ nosetests tests/
+    .
+    ----------------------------------------------------------------------
+    Ran 1 test in 0.003s
+    ```
+    
+    Why not with Pytest? Is there a workaround?
+
 ---
 
 Thanks for any suggestions as to how to deal with this.
